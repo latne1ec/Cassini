@@ -12,6 +12,8 @@
 		201936A01FB243E6003CE889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2019369F1FB243E6003CE889 /* Assets.xcassets */; };
 		201936A31FB243E6003CE889 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201936A11FB243E6003CE889 /* LaunchScreen.storyboard */; };
 		201936AB1FB24458003CE889 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201936AA1FB24458003CE889 /* ImageViewController.swift */; };
+		207667961FB2508D0051748F /* CassiniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207667951FB2508D0051748F /* CassiniViewController.swift */; };
+		207667981FB252F60051748F /* DemoURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207667971FB252F60051748F /* DemoURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		201936A21FB243E6003CE889 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		201936A41FB243E6003CE889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201936AA1FB24458003CE889 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		207667951FB2508D0051748F /* CassiniViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CassiniViewController.swift; sourceTree = "<group>"; };
+		207667971FB252F60051748F /* DemoURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				201936981FB243E6003CE889 /* AppDelegate.swift */,
 				2019369C1FB243E6003CE889 /* Main.storyboard */,
+				207667971FB252F60051748F /* DemoURL.swift */,
+				207667951FB2508D0051748F /* CassiniViewController.swift */,
 				201936AA1FB24458003CE889 /* ImageViewController.swift */,
 				2019369F1FB243E6003CE889 /* Assets.xcassets */,
 				201936A11FB243E6003CE889 /* LaunchScreen.storyboard */,
@@ -136,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207667981FB252F60051748F /* DemoURL.swift in Sources */,
 				201936AB1FB24458003CE889 /* ImageViewController.swift in Sources */,
+				207667961FB2508D0051748F /* CassiniViewController.swift in Sources */,
 				201936991FB243E6003CE889 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

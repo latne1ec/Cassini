@@ -19,19 +19,19 @@ class ImageViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     private func fetchImage () {
         if let url = imageUrl {
-            let urlContents = try? Data(contentsOf: url)
-            if let imageData = urlContents {
-                image  = UIImage(data: imageData)
+            spinner.startAnimating()
+            DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+                let urlContents = try? Data(contentsOf: url)
+                if let imageData = urlContents, url == self?.imageUrl {
+                    DispatchQueue.main.async {
+                        self?.image  = UIImage(data: imageData)
+                    }
+                }
             }
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.addSubview(imageView)
-        imageUrl = URL(string: "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2013/07/26/100917787-Stanford_Oval_May_2011_panorama_r.jpg?v=1374868882")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +60,7 @@ class ImageViewController: UIViewController {
             imageView.image = newValue
             imageView.sizeToFit()
             scrollView?.contentSize = imageView.frame.size
+            spinner?.stopAnimating()
         }
     }
 }
